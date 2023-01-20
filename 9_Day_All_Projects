@@ -1,0 +1,80 @@
+# 9th Day, 1st Project
+# st_sc = {
+#     "Usman": 81,
+#     "Ahmad": 78,
+#     "Jawad": 99,
+#     "Zeeshan": 74,
+#     "Momin": 62,
+# }
+
+# st_gr = {}
+
+# for student in st_sc:
+#     score = st_sc[student]
+#     if score > 90:
+#         st_gr[student] = "Outstanding"
+#     elif score > 80:
+#         st_gr[student] = "Exceeds Expectations"
+#     elif score > 70:
+#         st_gr[student] = "Acceptable"
+#     else:
+#         st_gr[student] = "Fail"
+    
+# print(st_gr)
+# =================================================================================
+
+# Project 2
+# Creating Travel Log data and adding a new country through a function
+# travel_log = [
+# {
+#     "country":"France",
+#     "visits":12,
+#     "cities":["Paris","Lille","Dijon"]
+# },
+# {
+#     "country":"Germany",
+#     "visits":"5",
+#     "cities":["Berlin","Hamburg","Stuttgart"]
+# },
+# ]
+
+# def add_new_country(country, visits, cities):
+#     new_country = {
+#         "country": country,
+#         "visits":visits,
+#         "cities":cities
+#         }
+#     travel_log.append(new_country)
+
+# add_new_country("Russia", 2, ["Moscow", "Saint"])
+# print(travel_log)
+# =================================================================================
+
+# Project 3:
+# Secret Auction Program, Find the person with highest bid
+import os
+bidding = True
+details = {}
+print("Welcome to the secret auction program.")
+while bidding:
+    name = input("What is your name: ")
+    bid_price = int(input("What is your bid?: $"))
+    details[name] = bid_price
+
+    other_users = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+
+    if other_users == 'yes':
+        os.system('cls')
+        
+    else:
+        os.system('cls')
+        bidding = False
+        winner = None
+        highest_bid = 0
+        for bidder in details:
+            bid =details[bidder]
+            if bid > highest_bid:
+                highest_bid = bid 
+                winner = bidder
+
+print(f"The winner is {winner} with a bid of {highest_bid}.")
